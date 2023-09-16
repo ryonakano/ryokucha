@@ -1,0 +1,7 @@
+# build dirs
+build*
+
+# vim
+*.swp
+*~
+*.un~
