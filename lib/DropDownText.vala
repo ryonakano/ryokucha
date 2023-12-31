@@ -91,6 +91,18 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
             label.label = item.text;
             bind_property ("max-width-chars", label, "max-width-chars", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
             bind_property ("ellipsize", label, "ellipsize", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+            bind_property ("ellipsize", label, "tooltip_text", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+                           (binding, from_value, ref to_value) => {
+                               Pango.EllipsizeMode ellipsize_mode = (Pango.EllipsizeMode) from_value;
+                               // Set the label text to tooltip_text if ellipsized, otherwise clear it
+                               if (ellipsize_mode != Pango.EllipsizeMode.NONE) {
+                                   to_value.set_string (label.label);
+                               } else {
+                                   to_value.set_string (null);
+                               }
+
+                               return true;
+                           });
         });
 
         dropdown = new Gtk.DropDown (liststore, null) {
