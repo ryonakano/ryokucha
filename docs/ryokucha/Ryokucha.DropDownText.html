@@ -58,8 +58,13 @@
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">sealed</span> <span class="main_keyword">class</span> <b><span class="class">DropDownText</span></b> : <span class="main_type"><span class="class">Grid</span></span>
         </div>
         <div class="description">
-          <p>A <span class="class">Ryokucha.DropDownText</span> is a simple variant of <span class="class">Gtk.DropDown</span> for text-only use 
-            cases.</p>
+          <p>A <span class="class">Ryokucha.DropDownText</span> is a simple variant of 
+            <a href="https://valadoc.org/gtk4/Gtk.DropDown.html" target="_blank">Gtk.DropDown</a> for text-only use cases.</p>
+          <p>It is designed to have similar looks, feels, and interface with <a href="https://valadoc.org/gtk4/Gtk.ComboBoxText.html" target="_blank">
+              Gtk.ComboBoxText</a>, which is deprecated in GTK 4.10.<br/> While it is said to use Gtk.DropDown with a 
+            <a href="https://valadoc.org/gtk4/Gtk.StringList.html" target="_blank">Gtk.StringList</a> instead, it is not possible to give "active-id" 
+            to each row unlike Gtk.ComboBoxText. This class achieves that using normal Gtk.DropDown, while hiding messy stuff and making it simple to 
+            use like Gtk.ComboBoxText.</p>
           <p>
             <img src="img/dropdowntext.png" alt="An example DropDownText"/></p>
         </div><br/>
