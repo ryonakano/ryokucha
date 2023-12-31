@@ -14,7 +14,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/ryokucha.git
-        tag: '0.1.0'
+        tag: 'x.y.z'
 ```
 
 Then call `ryokucha` in your meson file:
