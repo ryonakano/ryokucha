@@ -4,7 +4,14 @@
  */
 
 /**
- * A {@link Ryokucha.DropDownText} is a simple variant of {@link Gtk.DropDown} for text-only use cases.
+ * A {@link Ryokucha.DropDownText} is a simple variant of [[https://valadoc.org/gtk4/Gtk.DropDown.html|Gtk.DropDown]]
+ * for text-only use cases.
+ *
+ * It is designed to have similar looks, feels, and interface with
+ * [[https://valadoc.org/gtk4/Gtk.ComboBoxText.html|Gtk.ComboBoxText]], which is deprecated in GTK 4.10.<<BR>>
+ * While it is said to use Gtk.DropDown with a [[https://valadoc.org/gtk4/Gtk.StringList.html|Gtk.StringList]] instead,
+ * it is not possible to give "active-id" to each row unlike Gtk.ComboBoxText. This class achieves that
+ * using normal Gtk.DropDown, while hiding messy stuff and making it simple to use like Gtk.ComboBoxText.
  *
  * {{../doc/images/dropdowntext.png|An example DropDownText}}
  */
@@ -28,6 +35,9 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
 
     /**
      * The preferred place to ellipsize the string, if the label does not have enough room to display the entire string.
+     *
+     * If this property is set to {@link Pango.EllipsizeMode.NONE}, no tooltip text is se for each row.
+     * Otherwise, tooltip text is set for each row from its label text.
      */
     public Pango.EllipsizeMode ellipsize { get; set; }
 
