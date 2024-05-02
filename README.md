@@ -72,15 +72,15 @@ You'll need the following dependencies:
 * meson
 * valac
 
-Run `meson setup` to configure the build environment and run `ninja` to build
+Run `meson setup` to configure the build environment and run `meson compile` to build:
 
 ```bash
 meson setup builddir --prefix=/usr
-ninja -C builddir
+meson compile -C builddir
 ```
 
-To install, use `ninja install`
+To install, use `meson install`:
 
 ```bash
-ninja install -C builddir
+meson install -C builddir
 ```
