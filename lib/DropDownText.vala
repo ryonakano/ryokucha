@@ -179,7 +179,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
      * @param id        A string ID for this value
      * @param text      A string
      */
-    public new void append (string? id, string text) {
+    public void append (string? id, string text) {
         insert (-1, id, text);
     }
 
@@ -271,7 +271,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
      *
      * @param position  Index of the item to remove
      */
-    public new void remove (int position) {
+    public void remove (int position) {
         liststore.remove (position);
     }
 
