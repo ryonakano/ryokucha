@@ -9,7 +9,11 @@ public class Application : Gtk.Application {
     public Application () {
         Object (
             application_id: "io.github.ryonakano.ryokucha.demo",
+#if HAS_GLIB_2_74
             flags: ApplicationFlags.DEFAULT_FLAGS
+#else
+            flags: ApplicationFlags.FLAGS_NONE
+#endif
         );
     }
 
