@@ -8,16 +8,18 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var label = new Gtk.Label ("Type:") {
+        title = "Ryokucha Demo";
+        default_width = 300;
+        default_height = 250;
+
+        var label = new Gtk.Label ("DropDownText:") {
             halign = Gtk.Align.END
         };
 
-        var dropdown = new Gtk.ComboBoxText ();
-        //var dropdown = new Ryokucha.DropDownText ();
-        dropdown.insert (0, null, "Hoge");
-        dropdown.insert (1, null, "Fuga");
-        dropdown.insert (2, "hoge", "hoge");
-        dropdown.insert (3, "hoge", "fuga");
+        var dropdown = new Ryokucha.DropDownText ();
+        dropdown.append ("foo", "Foo");
+        dropdown.append ("bar", "Bar");
+        dropdown.append ("baz", "Baz");
 
         var grid = new Gtk.Grid () {
             vexpand = true,
