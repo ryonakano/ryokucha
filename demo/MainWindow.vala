@@ -5,13 +5,14 @@
 
 public class MainWindow : Gtk.ApplicationWindow {
     public MainWindow () {
+        Object (
+            title: "Ryokucha Demo",
+            default_width: 300,
+            default_height: 250
+        );
     }
 
     construct {
-        title = "Ryokucha Demo";
-        default_width = 300;
-        default_height = 250;
-
         var label = new Gtk.Label ("DropDownText:") {
             halign = Gtk.Align.END
         };
