@@ -15,7 +15,7 @@
  *
  * {{../doc/images/dropdowntext.png|An example DropDownText}}
  */
-public sealed class Ryokucha.DropDownText : Gtk.Grid {
+public sealed class Ryokucha.DropDownText : Gtk.Widget {
     /**
      * Emitted when the active item is changed.
      */
@@ -58,16 +58,24 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
         }
     }
 
-    private class DropDownRow : Gtk.Grid {
+    private class DropDownRow : Gtk.Widget {
         public Gtk.Label label { get; set; }
 
         public DropDownRow () {
         }
 
+        ~DropDownRow () {
+            get_first_child ().unparent ();
+        }
+
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
+
         construct {
             label = new Gtk.Label (null);
 
-            attach (label, 0, 0);
+            label.set_parent (this);
         }
     }
 
@@ -78,6 +86,14 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
      * @return A new {@link Ryokucha.DropDownText}
      */
     public DropDownText () {
+    }
+
+    ~DropDownText () {
+        get_first_child ().unparent ();
+    }
+
+    static construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
     }
 
     construct {
@@ -119,7 +135,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
             factory = factory
         };
 
-        attach (dropdown, 0, 0);
+        dropdown.set_parent (this);
 
         dropdown.bind_property ("selected", this, "active-id",
                                 BindingFlags.BIDIRECTIONAL,
@@ -163,7 +179,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
      * @param id        A string ID for this value
      * @param text      A string
      */
-    public new void append (string? id, string text) {
+    public void append (string? id, string text) {
         insert (-1, id, text);
     }
 
@@ -255,7 +271,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Grid {
      *
      * @param position  Index of the item to remove
      */
-    public new void remove (int position) {
+    public void remove (int position) {
         liststore.remove (position);
     }
 
