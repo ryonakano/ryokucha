@@ -56,6 +56,10 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
                 text: text
             );
         }
+
+        static construct {
+            Random.set_seed ((uint32) time_t (null));
+        }
     }
 
     private class DropDownRow : Gtk.Widget {
@@ -97,8 +101,6 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
     }
 
     construct {
-        Random.set_seed ((uint32) time_t (null));
-
         liststore = new ListStore (typeof (ListStoreItem));
 
         var factory = new Gtk.SignalListItemFactory ();
