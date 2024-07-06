@@ -3,6 +3,8 @@ Ryokucha (緑茶, meaning green tea in Japanese) is a GTK4 library that includes
 
 [API Reference](https://ryonakano.github.io/ryokucha/ryokucha)
 
+[![Packaging status](https://repology.org/badge/vertical-allrepos/ryokucha.svg)](https://repology.org/project/ryokucha/versions)
+
 ## How to Use in Your Project
 ### Method 1. Flatpak Manifest
 If you want to use Ryokucha in a Flatpak app, simply call it as a module in your Flatpak manifest:
