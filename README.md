@@ -70,7 +70,9 @@ If you mean to perform code changes and create a pull request against this proje
 
 You'll need the following dependencies:
 
+* libglib-2.0-dev
 * libgtk-4-dev
+* libpango1.0-dev
 * meson
 * valac
 
