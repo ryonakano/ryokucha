@@ -1,5 +1,5 @@
 # Ryokucha
-Ryokucha (緑茶, meaning green tea in Japanese) is a GTK4 library that includes customized widgets I commonly use in my projects.
+Ryokucha (緑茶, meaning green tea in Japanese) is a GTK4 library that includes customized widgets.
 
 [API Reference](https://ryonakano.github.io/ryokucha/ryokucha)
 

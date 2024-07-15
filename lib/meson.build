@@ -27,7 +27,7 @@ ryokucha_pc = pkgconfig.generate(
     name: 'ryokucha',
     requires: libryokucha_deps,
     subdirs: ['ryokucha'],
-    description: 'A GTK4 library that includes customized widgets I commonly use in my projects',
+    description: 'A GTK4 library that includes customized widgets',
     version: meson.project_version(),
     url: 'https://github.com/ryonakano/ryokucha',
 )
