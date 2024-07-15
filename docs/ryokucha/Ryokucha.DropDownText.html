@@ -51,11 +51,11 @@
         <img class="main_diagram" usemap="#Ryokucha.DropDownText" alt="Object hierarchy for DropDownText" src="img/Ryokucha.DropDownText.svg"/>
 
       <map id="Ryokucha.DropDownText" name="Ryokucha.DropDownText">
-<area shape="rect" id="node1" href="Ryokucha.DropDownText.html" title="Ryokucha.DropDownText" alt="" coords="334,389,547,437"/>
+<area shape="rect" id="node1" href="Ryokucha.DropDownText.html" title="Ryokucha.DropDownText" alt="" coords="256,293,469,341"/>
 </map>
 
         <h2 class="main_title">Description:</h2>
-        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">sealed</span> <span class="main_keyword">class</span> <b><span class="class">DropDownText</span></b> : <span class="main_type"><span class="class">Grid</span></span>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">sealed</span> <span class="main_keyword">class</span> <b><span class="class">DropDownText</span></b> : <span class="main_type"><span class="abstract_class">Widget</span></span>
         </div>
         <div class="description">
           <p>A <span class="class">Ryokucha.DropDownText</span> is a simple variant of 
@@ -149,52 +149,8 @@
         </ul>
         <h3 class="main_title">Inherited Members:</h3>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-0')">All known members inherited from class Gtk.Grid</div>
+          <div class="headline" onclick="toggle_box (this, 'box-content-0')">All known members inherited from class Gtk.Widget</div>
           <div class="content" id="box-content-0">
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="method">attach</li>
-                <li class="method">attach_next_to</li>
-                <li class="property">baseline_row</li>
-                <li class="property">column_homogeneous</li>
-                <li class="property">column_spacing</li>
-                <li class="method">get_baseline_row</li>
-                <li class="method">get_child_at</li>
-                <li class="method">get_column_homogeneous</li>
-                <li class="method">get_column_spacing</li>
-              </ul>
-            </div>
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="method">get_row_baseline_position</li>
-                <li class="method">get_row_homogeneous</li>
-                <li class="method">get_row_spacing</li>
-                <li class="method">insert_column</li>
-                <li class="method">insert_next_to</li>
-                <li class="method">insert_row</li>
-                <li class="method">query_child</li>
-                <li class="method">remove</li>
-                <li class="method">remove_column</li>
-              </ul>
-            </div>
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="method">remove_row</li>
-                <li class="property">row_homogeneous</li>
-                <li class="property">row_spacing</li>
-                <li class="method">set_baseline_row</li>
-                <li class="method">set_column_homogeneous</li>
-                <li class="method">set_column_spacing</li>
-                <li class="method">set_row_baseline_position</li>
-                <li class="method">set_row_homogeneous</li>
-                <li class="method">set_row_spacing</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-1')">All known members inherited from class Gtk.Widget</div>
-          <div class="content" id="box-content-1">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">action_set_enabled</li>
@@ -437,8 +393,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-2')">All known members inherited from class GLib.Object</div>
-          <div class="content" id="box-content-2">
+          <div class="headline" onclick="toggle_box (this, 'box-content-1')">All known members inherited from class GLib.Object</div>
+          <div class="content" id="box-content-1">
             <div class="column">
               <ul class="navi_inline">
                 <li class="method">@get</li>
@@ -504,21 +460,22 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-3')">All known members inherited from interface Gtk.Accessible</div>
-          <div class="content" id="box-content-3">
+          <div class="headline" onclick="toggle_box (this, 'box-content-2')">All known members inherited from interface Gtk.Accessible</div>
+          <div class="content" id="box-content-2">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_property">accessible_role</li>
+                <li class="method">announce</li>
                 <li class="abstract_method">get_accessible_parent</li>
                 <li class="method">get_accessible_role</li>
                 <li class="abstract_method">get_at_context</li>
                 <li class="abstract_method">get_bounds</li>
                 <li class="abstract_method">get_first_accessible_child</li>
-                <li class="abstract_method">get_next_accessible_sibling</li>
               </ul>
             </div>
             <div class="column">
               <ul class="navi_inline">
+                <li class="abstract_method">get_next_accessible_sibling</li>
                 <li class="abstract_method">get_platform_state</li>
                 <li class="method">reset_property</li>
                 <li class="method">reset_relation</li>
@@ -540,8 +497,8 @@
           </div>
         </div>
         <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-4')">All known members inherited from interface Gtk.Buildable</div>
-          <div class="content" id="box-content-4">
+          <div class="headline" onclick="toggle_box (this, 'box-content-3')">All known members inherited from interface Gtk.Buildable</div>
+          <div class="content" id="box-content-3">
             <div class="column">
               <ul class="navi_inline">
                 <li class="abstract_method">add_child</li>
@@ -562,26 +519,6 @@
                 <li class="abstract_method">parser_finished</li>
                 <li class="abstract_method">set_buildable_property</li>
                 <li class="abstract_method">set_id</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <div class="headline" onclick="toggle_box (this, 'box-content-5')">All known members inherited from interface Gtk.Orientable</div>
-          <div class="content" id="box-content-5">
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="method">get_orientation</li>
-              </ul>
-            </div>
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="abstract_property">orientation</li>
-              </ul>
-            </div>
-            <div class="column">
-              <ul class="navi_inline">
-                <li class="method">set_orientation</li>
               </ul>
             </div>
           </div>
