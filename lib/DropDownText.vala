@@ -77,7 +77,9 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
         }
 
         construct {
-            label = new Gtk.Label (null);
+            label = new Gtk.Label (null) {
+                halign = Gtk.Align.START
+            };
 
             label.set_parent (this);
         }
