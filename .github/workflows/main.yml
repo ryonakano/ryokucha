@@ -20,7 +20,7 @@ jobs:
       env:
         DESTDIR: out
       run: |
-        meson setup builddir --prefix=/usr
+        meson setup builddir --prefix=/usr -Ddemo=true
         meson compile -C builddir
         meson install -C builddir
 
