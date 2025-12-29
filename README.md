@@ -23,13 +23,13 @@ Then call `ryokucha` in your meson file:
 
 ```meson
 executable(
-    meson.project_name(),
-    'src/Application.vala',
-    dependencies: [
-        dependency('gtk4'),
-        dependency('ryokucha')
-    ],
-    install: true
+  meson.project_name(),
+  'src/Application.vala',
+  dependencies: [
+    dependency('gtk4'),
+    dependency('ryokucha'),
+  ],
+  install: true,
 )
 ```
 
@@ -53,13 +53,13 @@ Add `ryokucha_deps` in the `dependencies` list in your `meson.build`:
 
 ```meson
 executable(
-    meson.project_name(),
-    'src/Application.vala',
-    dependencies: [
-        dependency('gtk4'),
-        ryokucha_deps,
-    ],
-    install: true
+  meson.project_name(),
+  'src/Application.vala',
+  dependencies: [
+    dependency('gtk4'),
+    ryokucha_deps,
+  ],
+  install: true,
 )
 ```
 
