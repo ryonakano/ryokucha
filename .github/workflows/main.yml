@@ -1,24 +1,26 @@
 name: CI
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
     name: Build
+
     runs-on: ubuntu-latest
 
     container:
-      image: ubuntu:22.04
+      image: ubuntu:latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v6
+
     - name: Install Dependencies
       run: |
         apt update
         apt install -y libglib2.0-dev libgtk-4-dev libpango1.0-dev meson valac
+
     - name: Build
-      env:
-        DESTDIR: out
       run: |
         meson setup builddir --prefix=/usr -Ddemo=true
         meson compile -C builddir
@@ -26,12 +28,15 @@ jobs:
 
   lint:
     name: Lint
+
     runs-on: ubuntu-latest
 
     container:
       image: valalang/lint
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v6
+
     - name: Lint
       run: io.elementary.vala-lint -d .
