@@ -20,10 +20,10 @@ libryokucha_deps = [
 
 subdir('lib')
 
-if get_option('doc')
-  subdir('doc')
-endif
-
 if get_option('demo')
   subdir('demo')
+endif
+
+if get_option('doc')
+  subdir('docs')
 endif

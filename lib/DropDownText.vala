@@ -13,7 +13,7 @@
  * it is not possible to give "active-id" to each row unlike Gtk.ComboBoxText. This class achieves that
  * using normal Gtk.DropDown, while hiding messy stuff and making it simple to use like Gtk.ComboBoxText.
  *
- * {{../doc/images/dropdowntext.png|An example DropDownText}}
+ * {{../docs/images/dropdowntext.png|An example DropDownText}}
  */
 public sealed class Ryokucha.DropDownText : Gtk.Widget {
     /**
