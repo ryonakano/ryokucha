@@ -1,24 +1,29 @@
 valadoc = find_program('valadoc')
 
-valadoc_vala_dir = 'docs'
-valadoc_target = custom_target(
+valadoc_pkgs = []
+foreach dep : libryokucha_deps
+  if not dep.found()
+    continue
+  endif
+
+  valadoc_pkgs += '--pkg=@0@'.format(dep.name())
+endforeach
+
+valadoc_output_dir = 'valadoc'
+custom_target(
   'valadoc',
   command: [
     valadoc,
-    '--pkg=gio-2.0',
-    '--pkg=glib-2.0',
-    '--pkg=gobject-2.0',
-    '--pkg=gtk4',
-    '--pkg=pango',
+    valadoc_pkgs,
     libryokucha_sources,
     '--package-name=' + meson.project_name(),
     '--package-version=' + meson.project_version(),
     '--verbose',
     '--force',
     '--use-svg-images',
-    '-o', meson.project_source_root() / valadoc_vala_dir,
+    '-o', valadoc_output_dir,
   ],
   build_by_default: true,
-  output: valadoc_vala_dir,
+  output: valadoc_output_dir,
   depends: ryokucha_lib,
 )
