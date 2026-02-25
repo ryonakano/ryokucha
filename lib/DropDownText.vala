@@ -24,14 +24,14 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
     /**
      * The value of the ID column of the active row.
      */
-    public string? active_id { get; set; }
+    public string? active_id { get; set; default = null; }
 
     /**
      * The desired maximum width of the label, in characters.
      *
      * If this property is set to -1, the width will be calculated automatically.
      */
-    public int max_width_chars { get; set; }
+    public int max_width_chars { get; set; default = -1; }
 
     /**
      * The preferred place to ellipsize the string, if the label does not have enough room to display the entire string.
@@ -39,7 +39,7 @@ public sealed class Ryokucha.DropDownText : Gtk.Widget {
      * If this property is set to {@link Pango.EllipsizeMode.NONE}, no tooltip text is se for each row.
      * Otherwise, tooltip text is set for each row from its label text.
      */
-    public Pango.EllipsizeMode ellipsize { get; set; }
+    public Pango.EllipsizeMode ellipsize { get; set; default = Pango.EllipsizeMode.NONE; }
 
     /**
      * A {@link Gtk.DropDown} which this uses internally.
