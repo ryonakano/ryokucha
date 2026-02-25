@@ -1,6 +1,6 @@
 project('ryokucha',
   'vala', 'c',
-  version: '0.3.1',
+  version: '0.4.0',
 )
 
 pkgconfig = import('pkgconfig')
